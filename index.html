@@ -1,9 +1,283 @@
-What this does:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Forgotten Birthday</title>
 
-* Creates the intro screen (black screen → mysterious message)
+    <link rel="stylesheet" href="style.css">
+</head>
 
-* Creates the quest menu with all your options
+<body>
 
-* Creates the ending screen with the apology message
+    <!-- Floating Fireflies -->
+    <div id="particles"></div>
 
-* Connects to style.css and script.js (we’ll create those next)
+    <!-- =========================
+         INTRO SCREEN
+    ========================== -->
+
+    <section id="introScreen" class="screen">
+
+        <div class="panel">
+
+            <div class="hearts">
+                ❤️ ❤️ ❤️
+            </div>
+
+            <h1>The Forgotten Birthday</h1>
+
+            <h2>A New Quest Has Appeared</h2>
+
+            <div
+                id="introText"
+                class="typewriter">
+            </div>
+
+            <div style="text-align:center">
+
+                <button
+                    class="btn"
+                    onclick="beginQuest()">
+
+                    Begin Quest
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         QUEST SCREEN
+    ========================== -->
+
+    <section
+        id="questScreen"
+        class="screen hidden">
+
+        <div class="panel">
+
+            <h1>Quest Log</h1>
+
+            <p>
+
+                A hero made a mistake.
+
+                Though time cannot be reversed...
+
+                perhaps this quest can make
+                things right.
+
+            </p>
+
+            <br>
+
+            <h3>Main Quest</h3>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="food">
+
+                🍜 Ramen Village
+
+            </label>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="food">
+
+                🍣 Sushi Harbor
+
+            </label>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="food">
+
+                🔥 Japanese BBQ Shrine
+
+            </label>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="food">
+
+                ❓ Let Fate Decide
+
+            </label>
+
+            <br>
+
+            <h3>Side Quest</h3>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="activity">
+
+                🍸 Hidden Cocktail Bar
+
+            </label>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="activity">
+
+                🏙 Rooftop Lookout
+
+            </label>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="activity">
+
+                🕹 Arcade Challenge
+
+            </label>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="activity">
+
+                🗝 Secret Speakeasy
+
+            </label>
+
+            <br>
+
+            <h3>Final Boss</h3>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="boss">
+
+                🟢 Hero Mode
+
+            </label>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="boss">
+
+                🟡 Master Mode
+
+            </label>
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="boss">
+
+                🔴 Demon King
+
+            </label>
+
+            <div style="text-align:center">
+
+                <button
+                    class="btn"
+                    onclick="finishQuest()">
+
+                    Accept Quest
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         ENDING
+    ========================== -->
+
+    <section
+        id="endingScreen"
+        class="screen hidden">
+
+        <div class="panel">
+
+            <h1>
+
+                Quest Accepted
+
+            </h1>
+
+            <h2>
+
+                ❤️
+
+            </h2>
+
+            <p>
+
+                Thank you for accepting this quest.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                I know I missed your birthday.
+
+                I know it hurt you.
+
+                You deserved to be celebrated
+                on the day,
+
+                and I can't change that.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                But I hope you'll let me
+                celebrate you now,
+
+                because you deserve that.
+
+            </p>
+
+            <br>
+
+            <h2>
+
+                To Be Continued...
+
+            </h2>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
