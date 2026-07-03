@@ -1,0 +1,276 @@
+/* ===========================
+   The Forgotten Birthday
+   Version 3
+=========================== */
+
+:root{
+    --gold:#d8b45a;
+    --light:#f8f1d0;
+    --green:#2f6b45;
+    --dark:#081018;
+    --panel:rgba(12,20,26,.82);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+        radial-gradient(circle at top,#16352d 0%,#0a141c 45%,#05080d 100%);
+    color:var(--light);
+    font-family:Georgia, serif;
+    overflow:hidden;
+    height:100vh;
+}
+
+/* Floating particles */
+
+#particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.particle{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:#fff7a6;
+    border-radius:50%;
+    opacity:.6;
+    animation:float linear infinite;
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(105vh);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    90%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-10vh);
+        opacity:0;
+    }
+
+}
+
+/* Main panel */
+
+.panel{
+
+    width:min(900px,92vw);
+
+    margin:5vh auto;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    background:var(--panel);
+
+    border:2px solid rgba(216,180,90,.5);
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,.65),
+        0 0 20px rgba(216,180,90,.15);
+
+    backdrop-filter:blur(8px);
+
+}
+
+/* Headings */
+
+h1{
+
+    text-align:center;
+
+    font-size:52px;
+
+    color:var(--gold);
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+
+    text-shadow:0 0 18px rgba(216,180,90,.35);
+
+}
+
+h2{
+
+    text-align:center;
+
+    color:#ffe9a8;
+
+    margin-bottom:25px;
+
+    font-size:26px;
+
+}
+
+h3{
+
+    margin-top:30px;
+
+    color:#f0d98d;
+
+}
+
+/* Hearts */
+
+.hearts{
+
+    text-align:center;
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+    animation:pulse 2.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    50%{
+        transform:scale(1.08);
+    }
+
+}
+
+/* Intro text */
+
+.typewriter{
+
+    min-height:110px;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+    white-space:pre-wrap;
+
+}
+
+/* Buttons */
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:linear-gradient(#3d8655,#29563b);
+
+    color:white;
+
+    padding:14px 26px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    user-select:none;
+
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 16px rgba(255,255,255,.2);
+
+}
+
+/* Menu options */
+
+.option{
+
+    display:block;
+
+    padding:12px;
+
+    margin-top:10px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:10px;
+
+    transition:.2s;
+
+    cursor:pointer;
+
+}
+
+.option:hover{
+
+    background:rgba(255,255,255,.05);
+
+    border-color:rgba(216,180,90,.5);
+
+}
+
+/* Hidden */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* Footer */
+
+.footer{
+
+    text-align:center;
+
+    opacity:.65;
+
+    margin-top:25px;
+
+    font-size:14px;
+
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+h1{
+
+font-size:34px;
+
+}
+
+.panel{
+
+padding:22px;
+
+margin:2vh auto;
+
+}
+
+.typewriter{
+
+font-size:17px;
+
+}
+
+}
